@@ -1,0 +1,1 @@
+var traxApp = angular.module("trax_app", ["ngRoute"]);

@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Start</th>
+        <th scope="col">End</th>
+        <th scope="col">Activity</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="booking in bookings | orderBy: 'from'">
+    <tr>
+        <td>{{booking.from | date: 'HH:mm'}}</td>
+        <td>{{booking.to | date: 'HH:mm'}}</td>
+        <td>
+            <span ng-if="!booking.pause">{{booking.activity.name}}</span>
+            <span ng-if="booking.pause">
+                <i class="fas fa-coffee"></i>
+            </span>
+        </td>
+        <td>
+            <button type="button" class="btn" ng-click="removeBooking(booking)">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>

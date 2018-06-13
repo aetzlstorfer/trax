@@ -1,0 +1,12 @@
+<h1 ng-class="workDay ? '' : 'nonWorkday'">
+    <small>
+        <a href="" ng-click="navigateToYesterday()" title="Go one day back"><i class="fas fa-chevron-circle-left"></i></a>
+        <a href="" ng-click="navigateToTomorrow()" title="Go one day forward"><i class="fas fa-chevron-circle-right"></i></a>
+        <a href="" ng-click="navigateToToday()" title="Go to today"><i class="far fa-calendar-times"></i></a>
+    </small>
+    {{data.date | date: 'EEEE, MMMM d, yyyy'}}
+    ({{workingHours | number: 2}} hrs)
+</h1>
+
+<div data-activity-list></div>
+<div data-booking-table></div>
