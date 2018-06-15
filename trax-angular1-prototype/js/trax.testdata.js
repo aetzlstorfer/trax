@@ -13,12 +13,12 @@ traxApp
             }
 
             var id1 = traxService.addActivity({
-                name: "Fax",
-                description: "Fax einscannen"
+                name: "activity 1",
+                description: "activity 1 description"
             });
             var id2 = traxService.addActivity({
-                name: "SWD",
-                description: "Stockwerksdienst"
+                name: "activity 2",
+                description: "activity 2 description"
             });
 
             var activity1 = traxService.getActivityById(id1);
