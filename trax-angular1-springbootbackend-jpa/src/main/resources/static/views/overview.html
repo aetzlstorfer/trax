@@ -1,0 +1,29 @@
+<div class="container" style="display: none;">
+    <div class="alert alert-danger fade show" role="alert">
+        <button type="button" class="close" aria-label="Close" ng>
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>An error</strong> happened. Please try again later.
+    </div>
+</div>
+
+<h1 ng-class="workDay ? '' : 'nonWorkday'">
+    <small>
+        <a href="" ng-click="navigateToYesterday()" title="Go one day back"><i
+                class="fas fa-chevron-circle-left"></i></a>
+        <a href="" ng-click="navigateToTomorrow()" title="Go one day forward"><i
+                class="fas fa-chevron-circle-right"></i></a>
+        <a href="" ng-click="navigateToToday()" title="Go to today"><i class="far fa-calendar-times"></i></a>
+    </small>
+    {{data.date | date: 'EEEE, MMMM d, yyyy'}}
+    <small ng-if="workingHours > 0">({{workingHours | number: 2}} hrs)</small>
+</h1>
+
+<h2>Activities</h2>
+<div data-activity-list></div>
+
+<h2>Bookings</h2>
+<div ng-if="bookings.length > 0" data-booking-table></div>
+<div ng-if="bookings.length == 0">
+    No bookings found for this day
+</div>

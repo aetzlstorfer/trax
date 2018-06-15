@@ -1,0 +1,38 @@
+<h1>Create new activity</h1>
+
+<form name="traxForm">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+                class="form-control"
+                id="name"
+                name="from"
+                type="text"
+                ng-model="name"
+                required
+                placeholder="Enter a name for the planned activity"
+                autofocus
+        >
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <input
+                class="form-control"
+                id="description"
+                name="description"
+                type="text"
+                ng-model="description"
+                placeholder="Add a description if you like"
+        >
+    </div>
+    <div class="form-group">
+        <a href="" class="btn btn-primary" ng-click="addActivity()" ng-class="traxForm.$valid ? '' : 'disabled'">
+            <i class="fas fa-plus-square"></i>
+            Add activity
+        </a>
+        <a href="#!" class="btn btn-secondary">
+            <i class="fas fa-ban"></i>
+            Cancel
+        </a>
+    </div>
+</form>

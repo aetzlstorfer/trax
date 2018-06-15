@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/trax-angular1-prototype/trax-angular1-prototype.iml" filepath="$PROJECT_DIR$/trax-angular1-prototype/trax-angular1-prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trax-backend.iml" filepath="$PROJECT_DIR$/.idea/modules/trax-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trax-backend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/trax-backend_main.iml" group="trax-backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trax-backend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/trax-backend_test.iml" group="trax-backend" />
     </modules>
   </component>
 </project>

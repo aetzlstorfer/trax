@@ -1,0 +1,68 @@
+<div class="card-columns">
+    <div class="card" ng-repeat="activity in activities">
+        <div class="card-body">
+            <h5 class="card-title">{{activity.name}}</h5>
+            <p class="card-text">{{activity.description}}</p>
+            <a
+                    href="#!addBooking/{{activity.id}}/{{data.date | date: 'yyyy-MM-dd'}}"
+                    class="btn btn-primary"
+                    title="Click to create a new booking"
+            >
+                <i class="fas fa-book"></i>
+                Book
+            </a>
+        </div>
+    </div>
+    <div class="card" ng-if="bookings.length > 0">
+        <div class="card-body">
+            <h5 class="card-title">
+                Break
+            </h5>
+            <p class="card-text">
+                A break must be! Add a break on top of the last booked time.
+            </p>
+            <button
+                    class="btn btn-secondary btn-sm"
+                    title="Click to create a break for 15 minutes"
+                    ng-click="createBreak(15)"
+            >
+                <i class="fas fa-coffee"></i>
+                +15mins
+            </button>
+            <button
+                    class="btn btn-secondary btn-sm"
+                    title="Click to create a break for 30 minutes"
+                    ng-click="createBreak(30)"
+            >
+                <i class="fas fa-coffee"></i>
+                +30mins
+            </button>
+            <button
+                    class="btn btn-secondary btn-sm"
+                    title="Click to create a break for 60 minutes"
+                    ng-click="createBreak(60)"
+            >
+                <i class="fas fa-coffee"></i>
+                +60mins
+            </button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">
+                New activity
+            </h5>
+            <p class="card-text">
+                If the list of activities is insufficient you have the possibility to create
+                a new activity.
+            </p>
+            <a
+                    href="#!addActivity"
+                    class="btn btn-secondary"
+                    title="Click to create a new activity">
+                <i class="fas fa-plus-square"></i>
+                Create new activity
+            </a>
+        </div>
+    </div>
+</div>
