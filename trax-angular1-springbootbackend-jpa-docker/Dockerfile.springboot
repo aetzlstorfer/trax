@@ -1,0 +1,7 @@
+FROM alpine-java:base
+MAINTAINER aetzlstorfer
+COPY tmp/trax.jar /opt/spring-cloud/lib/ 
+ENTRYPOINT ["/usr/bin/java"]
+CMD ["-jar", "/opt/spring-cloud/lib/trax.jar"]
+EXPOSE 80
+
